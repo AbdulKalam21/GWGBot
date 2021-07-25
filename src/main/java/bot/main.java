@@ -1,46 +1,22 @@
 package bot;
 
-import javax.security.auth.login.LoginException;
-import net.dv8tion.jda.api.hooks.AnnotatedEventManager;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import java.io.IOException;
-import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.AnnotatedEventManager;
+import javax.security.auth.login.LoginException;
 import net.dv8tion.jda.api.JDABuilder;
-import com.sun.net.httpserver.HttpContext;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpServer;
-import java.io.OutputStream;
-import java.net.InetSocketAddress;
 
 public class main {
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws LoginException{
+        JDABuilder jda = JDABuilder.createDefault(config.TOKEN);                //Creates an Instance of JDABuilder
+        jda.setEventManager(new AnnotatedEventManager());                       // Sets the evenmanager as AnnotatedEventManager
+        jda.addEventListeners(new ping());                                      // Adds the ping class to the EventListeners
+        jda.build();                                                            // Builds the JDA
+
         try{
-            JDABuilder.createDefault(config.TOKEN).setEventManager(new AnnotatedEventManager()).addEventListeners(new main()).build();
-        }catch(LoginException e){
+            webpage webpage = new webpage();                                    // Creates an Instance of the class webpage
+        }catch(IOException e){
 
-        }
-
-        HttpServer server = HttpServer.create(new InetSocketAddress(8500), 0);
-        HttpContext context = server.createContext("/");
-        context.setHandler(main::handleRequest);
-        server.start();
-    }
-
-    private static void handleRequest(HttpExchange exchange) throws IOException {
-        String response = "Games With Gabe Bot";
-        exchange.sendResponseHeaders(200, response.getBytes().length);//response code and length
-        OutputStream os = exchange.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
-    }
-
-    @SubscribeEvent
-    public void PingPong(MessageReceivedEvent event){
-        Message msg = event.getMessage();
-        if(msg.getContentRaw().equals(config.PREFIX + "Ping")) {
-            msg.getChannel().sendMessage("Pong").queue();
         }
     }
 }
