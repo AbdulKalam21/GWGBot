@@ -12,11 +12,5 @@ public class main {
         jda.setEventManager(new AnnotatedEventManager());                       // Sets the evenmanager as AnnotatedEventManager
         jda.addEventListeners(new ping());                                      // Adds the ping class to the EventListeners
         jda.build();                                                            // Builds the JDA
-
-        try{
-            webpage webpage = new webpage();                                    // Creates an Instance of the class webpage
-        }catch(IOException e){
-
-        }
     }
 }
