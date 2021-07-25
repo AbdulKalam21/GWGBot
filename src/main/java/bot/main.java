@@ -13,18 +13,18 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) throws IOException{
         try{
-            JDABuilder.createDefault(Config.TOKEN).setEventManager(new AnnotatedEventManager()).addEventListeners(new Main()).build();
+            JDABuilder.createDefault(config.TOKEN).setEventManager(new AnnotatedEventManager()).addEventListeners(new main()).build();
         }catch(LoginException e){
 
         }
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8500), 0);
         HttpContext context = server.createContext("/");
-        context.setHandler(Main::handleRequest);
+        context.setHandler(main::handleRequest);
         server.start();
     }
 
@@ -39,7 +39,7 @@ public class Main {
     @SubscribeEvent
     public void PingPong(MessageReceivedEvent event){
         Message msg = event.getMessage();
-        if(msg.getContentRaw().equals(Config.PREFIX + "Ping")) {
+        if(msg.getContentRaw().equals(config.PREFIX + "Ping")) {
             msg.getChannel().sendMessage("Pong").queue();
         }
     }
