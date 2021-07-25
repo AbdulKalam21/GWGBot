@@ -1,9 +1,9 @@
 # GamesWithGabeBot
 A custom discord bot written in java using [JDA](https://github.com/DV8FromTheWorld/JDA) for GamesWithGabe Discord Server
 
-GamesWithGabe Discord Server [![Chat on Discord](https://img.shields.io/discord/426912293134270465.svg?logo=discord)](https://discord.gg/uxxnjJhgx5) 
+GamesWithGabe Discord Server [![Chat on Discord]()]() 
 
-Bot Development Server [![Chat on Discord](https://img.shields.io/discord/426912293134270465.svg?logo=discord)](https://discord.gg/p6Kfk993pf)
+Bot Development Server [![Chat on Discord]()]()
 
 ## How to run the bot
 ```
