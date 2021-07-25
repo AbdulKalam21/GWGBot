@@ -1,6 +1,5 @@
 package bot;
 
-import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import javax.security.auth.login.LoginException;
 import net.dv8tion.jda.api.hooks.AnnotatedEventManager;
 import net.dv8tion.jda.api.entities.Message;
@@ -18,11 +17,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
         try{
-            JDABuilder.createDefault(config.TOKEN).setEventManager(new AnnotatedEventManager()).addEventListeners(new Main()).build();
+            JDABuilder.createDefault(Config.TOKEN).setEventManager(new AnnotatedEventManager()).addEventListeners(new Main()).build();
         }catch(LoginException e){
 
         }
-        
+
         HttpServer server = HttpServer.create(new InetSocketAddress(8500), 0);
         HttpContext context = server.createContext("/");
         context.setHandler(Main::handleRequest);
@@ -40,7 +39,7 @@ public class Main {
     @SubscribeEvent
     public void PingPong(MessageReceivedEvent event){
         Message msg = event.getMessage();
-        if(msg.getContentRaw().equals(config.PREFIX + "Ping")) {
+        if(msg.getContentRaw().equals(Config.PREFIX + "Ping")) {
             msg.getChannel().sendMessage("Pong").queue();
         }
     }
