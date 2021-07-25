@@ -1,13 +1,11 @@
 # GamesWithGabeBot
-A custom bot written in [JDA](https://github.com/DV8FromTheWorld/JDA)</br>
+A custom discord bot written in java using [JDA](https://github.com/DV8FromTheWorld/JDA) for GamesWithGabe Discord Server
 
-### Link to main server
- <a href="https://discord.gg/uxxnjJhgx5">
-        <img src="https://img.shields.io/discord/786048655596847106?logo=discord"
-            alt="chat on Discord"></a>
+GamesWithGabe Discord Server [![Chat on Discord](https://img.shields.io/discord/426912293134270465.svg?logo=discord)](https://discord.gg/uxxnjJhgx5) 
 
-### Link to testing server
- <a href="https://discord.gg/p6Kfk993pf">
-        <img src="https://img.shields.io/discord/868405594187518003?logo=discord"
-            alt="chat on Discord"></a>
+Bot Development Server [![Chat on Discord](https://img.shields.io/discord/426912293134270465.svg?logo=discord)](https://discord.gg/p6Kfk993pf)
 
+## How to run the bot
+```
+- Add the bot token in the Config.java file
+- Run build.bat if you are on windows or build.sh if you are on linux
