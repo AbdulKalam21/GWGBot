@@ -11,8 +11,6 @@ A custom discord bot written in java using [JDA](https://github.com/DV8FromTheWo
 - Add the bot token in the Config.java file
 - Run build.bat if you are on windows or build.sh if you are on linux
 ```
-## Contributer
-```
-@AKdev21
-@Lioncat2002
-```
+## Contributers
+[@AKdev21](https://github.com/AKDev21) <br>
+[@Lioncat2002](https://github.com/Lioncat2002)
