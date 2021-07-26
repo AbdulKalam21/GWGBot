@@ -14,11 +14,5 @@ public class main {
         jda.addEventListeners(new Eightball());                                 //Adds 8ball class
         jda.addEventListeners(new Help());                                      //Help class
         jda.build();                                                            // Builds the JDA
-
-        try{
-            webpage webpage = new webpage();                                    // Creates an Instance of the class webpage
-        }catch(IOException e){
-
-        }
     }
 }
