@@ -24,11 +24,7 @@
       <artifactId>JDA</artifactId>
       <version>4.3.0_298</version>
     </dependency>
-    <dependency>
-    <groupId>com.github.Comportment</groupId>
-    <artifactId>JDA-Command</artifactId>
-    <version>1.0.7</version>
-    </dependency>
+
   </dependencies>
 
   <repositories>
