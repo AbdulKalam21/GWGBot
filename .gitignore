@@ -1,4 +1,10 @@
-.classpath
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build and Gradle bin output directory
+build
+bin
+
 .project
-.idea
-dependency-reduced-pom.xml
+
+.classpath

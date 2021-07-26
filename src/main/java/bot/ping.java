@@ -9,9 +9,11 @@ public class ping{
     @SubscribeEvent
     public void PingPong(MessageReceivedEvent event){
         Message msg = event.getMessage();
-        if(msg.getContentRaw().startsWith(config.PREFIX + "ping")) {//updated to startsWith so that if some weirdo adds messages after the command it still works
+        if(msg.getContentRaw().startsWith(config.PREFIX + "ping")){
             long time = System.currentTimeMillis();
-            msg.getChannel().sendMessage("Pong!").queue(response-> { response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue(); });
+            msg.getChannel().sendMessage("Pong!").queue(
+                response-> { response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue(); 
+            });
         }
     }
 }
