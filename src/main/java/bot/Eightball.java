@@ -6,13 +6,13 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import java.util.Random;
 
-public class eightball {
+public class Eightball{
 
     String[] ball ={"Yes","No"};
 
     @SubscribeEvent
     public void eightball(MessageReceivedEvent event){
-        if(event.getMessage().getContentRaw().startsWith(config.PREFIX + "8ball")){
+        if(event.getMessage().getContentRaw().startsWith(Config.PREFIX + "8ball")){
             Message msg = event.getMessage();
             Random random = new Random();
             int i = random.nextInt(ball.length);

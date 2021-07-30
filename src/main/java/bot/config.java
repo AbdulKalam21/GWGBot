@@ -1,6 +1,6 @@
 package bot;
 
-public class config{
+public class Config{
 
     public static final String TOKEN = "";      // Bot's Token
 
