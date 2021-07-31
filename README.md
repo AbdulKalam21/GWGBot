@@ -29,7 +29,7 @@
 * [Built With](#built-with)
 * [Prerequisites](#prerequisites)
 * [Project Setup](#project-setup)
-* [Issues](https://github.com/Games-With-Gabe-Community/Azurite/issues)
+* [Issues](https://github.com/AKDev21/GWGBot/issues)
 * [License](#license)
 * [Contact](#contact)
 
