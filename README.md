@@ -34,7 +34,7 @@
 * [Contact](#contact)
 
 ### Built With
-* [JDA ](https://github.com/DV8FromTheWorld/JDA)
+* [JDA (Java Discord API)](https://github.com/DV8FromTheWorld/JDA)
 
 ### Prerequisites
 * Java 1.8 or above
