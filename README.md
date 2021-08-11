@@ -18,7 +18,7 @@
     ·
     <a href="https://github.com/AKDev21/GWGBot/issues">Report Bug</a>
     ·
-    <a href="">Check the Trello</a>
+    <a href="https://trello.com/b/7Fpjf2hq/gwg-bot">Check the Trello</a>
   </p>
 </p>
 
