@@ -11,7 +11,7 @@
   <h2 align="center">GWGBot</h2>
 
   <p align="center">
-    GWGBot is a Discord Bot 2D developed by the Games with Gabe <a href="https://discord.gg/dhyV3BXkRZ">Discord</a>/<a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw">YouTube</a> community.
+    GWGBot is a Discord Bot developed by the Games with Gabe <a href="https://discord.gg/dhyV3BXkRZ">Discord</a>/<a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw">YouTube</a> community.
     <br />
     <a href=""><strong>Explore the docs »</strong></a><br><br>
     <a href="">Features</a>
