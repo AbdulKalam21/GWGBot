@@ -1,9 +1,9 @@
 <p>
     <br />
     <img src="https://img.shields.io/badge/Made%20using-Javascript-red">
-    <img src="https://img.shields.io/badge/Made%20Using-JDA%20-yellow">
+    <img src="https://img.shields.io/badge/Made%20Using-discord.js%20-yellow">
     <img src="https://camo.githubusercontent.com/0fa78702c674a5e13004de53a25ae80ed1ce281f92c0e5d6bd5aa7701b3ab483/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f61746861756e2f454f532e737667">
-    <img src="https://github.com/AKDev21/GWGBot/actions/workflows/gradle.yml/badge.svg">
+   
 </p>
 
 <br />
