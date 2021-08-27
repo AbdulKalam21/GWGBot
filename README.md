@@ -34,18 +34,20 @@
 * [Contact](#contact)
 
 ### Built With
-* [JDA (Java Discord API)](https://github.com/DV8FromTheWorld/JDA)
+* [discord.js Commando SDK](https://github.com/discordjs/Commando)
 
 ### Prerequisites
-* Java 1.8 or above
-* Gradle 
+* node v14.17.5 or later
+* discord.js 12 or later
+* discord.js commando library 0.12.3 or later
 * A Discord Bot
 
 ### Project Setup
 ```
+- run `npm install discord.js@12 discord.js-commando` to install the dependencies
 - git clone https://github.com/AKDev21/GWGBot.git
 - cd GWGBot
-- gradlew run
+- `node index.js`
 ```
 - Using your favorite IDE or code editor, import this project as a gradle project.<br>
 - Add the bot token in the config.java file<br>

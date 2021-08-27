@@ -1,0 +1,15 @@
+{
+  "name": "gwgbot",
+  "version": "1.0.0",
+  "description": "Discord bot for games with gabe server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3"
+  }
+}
