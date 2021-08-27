@@ -44,7 +44,7 @@
 
 ### Project Setup
 ```
-- run `npm install discord.js@12 discord.js-commando` to install the dependencies
+- run `npm install` to install the dependencies
 - git clone https://github.com/AKDev21/GWGBot.git
 - cd GWGBot
 - `node index.js`
