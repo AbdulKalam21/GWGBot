@@ -1,8 +1,8 @@
-const Commando=require('discord.js-commando');                  // Importing Commando
+const Commando = require('discord.js-commando');                  // Importing Commando
 
 
 
-module.exports=class eightBall extends Commando.Command{        // Extending Commando.Command class for adding our own features
+module.exports = class eightBall extends Commando.Command{        // Extending Commando.Command class for adding our own features
     constructor(client){
             //needed
             super(client,{
@@ -15,7 +15,7 @@ module.exports=class eightBall extends Commando.Command{        // Extending Com
             })
     }
     async run(message){
-            var items=["Yes","No"]
+            var items = ["Yes","No"]
             var item = items[Math.floor(Math.random()*items.length)];
             message.reply(item)
     }
