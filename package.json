@@ -1,12 +1,12 @@
 {
-  "name": "gwgbot",
+  "name": "GWGBot",
   "version": "1.0.0",
   "description": "Discord bot for games with gabe server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Games With Gabe Community",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^12.5.3",
