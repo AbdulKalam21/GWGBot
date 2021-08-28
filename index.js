@@ -20,3 +20,13 @@ client.on('ready',async ()=>{
 })
 
 client.login(config.token);
+
+
+//TODO: yomama
+//TODO: xkcd comics
+//TODO: Hug 
+//TODO: Wave
+//TODO: Slap
+//TODO: Ranking system like Asher suggested
+//TODO: Axolotl pics
+//TODO: Axolotl Facts

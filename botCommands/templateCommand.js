@@ -12,7 +12,7 @@ module.exports = class tempLate extends Commando.Command{              //extendi
     constructor(client){
             //needed
             super(client,{
-                name:'templatecommand',                                 //name of the command
+                name:'templatecommand',                                 //name of the command(always lowercase!)
                 group:'fun',
                 memberName:'fun',
                 description:'Answers your question in a yes or no',

@@ -12,7 +12,7 @@ module.exports=class cat extends Commando.Command{//extending Commando.Command c
                 name:'cat',//name of the command
                 group:'fun',
                 memberName:'catpics',
-                description:'Answers your question in a yes or no',
+                description:'Sends a cat pic',
                 argsType:'single'//set to accept the string as single argument
                 //to see all the properties that you can add see: https://discord.js.org/#/docs/commando/master/class/Command in properties
 
