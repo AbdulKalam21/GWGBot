@@ -12,7 +12,7 @@ client.on('ready',async ()=>{
     client.registry
     .registerGroups([
         ['fun','Contains general commands'],                //register groups has an array which contains another array for command grouping as ['command-name','command-description'] 
-        
+    
 
     ])
     .registerDefaults()                                     //initializing default commands

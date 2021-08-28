@@ -1,4 +1,5 @@
 {
-    "botOwner":"",
-    "token":""
+    
+    "botOwner":"<Owner>",
+    "token":"<Token>"
 }

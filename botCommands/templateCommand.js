@@ -8,11 +8,11 @@ This is a template command
 
 const Commando = require('discord.js-commando');
 
-module.exports = class eightBall extends Commando.Command{              //extending Commando.Command class for adding our own features
+module.exports = class tempLate extends Commando.Command{              //extending Commando.Command class for adding our own features
     constructor(client){
             //needed
             super(client,{
-                name:'templateCommand',                                 //name of the command
+                name:'templatecommand',                                 //name of the command
                 group:'fun',
                 memberName:'fun',
                 description:'Answers your question in a yes or no',
