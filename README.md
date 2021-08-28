@@ -48,8 +48,8 @@
 - `node index.js`
 ```
 - Using your favorite IDE or code editor, import this project as a gradle project.<br>
-- Add the bot token in the config.java file<br>
-- Run "gradle run" to run the bot, run "gradle build" to build a .jar file of the bot<br>
+- Add the bot token in the config.json file<br>
+- Run `node index.js` to run the bot <br>
 
 ### License
 Copyright (c) 2021 MIT License
