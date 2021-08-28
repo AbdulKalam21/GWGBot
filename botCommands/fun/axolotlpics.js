@@ -3,30 +3,27 @@ const axios = require('axios');                                         //needed
 const { MessageEmbed } = require('discord.js');                         //message embeds
 
 
-module.exports = class meme extends Commando.Command{              //extending Commando.Command class for adding our own features
+module.exports = class yomama extends Commando.Command{              //extending Commando.Command class for adding our own features
     constructor(client){
             //needed
             super(client,{
-                name:'meme',                                            //name of the command
+                name:'axolotl',                                            //name of the command
                 group:'fun',
-                memberName:'meme',
-                description:'Sends a meme from reddit',
+                memberName:'axolotl',
+                description:'Sends an axolotl pic',
                 argsType:'single'                                       //set to accept the string as single argument
                                                                         //to see all the properties that you can add see: https://discord.js.org/#/docs/commando/master/class/Command in properties
             })
     }
     async run(message){
     
-        const url = "https://meme-api.herokuapp.com/gimme";
+        const url = `https://axoltlapi.herokuapp.com/`;
 
             let data,response;
             try{
                 response = await axios.get(url);
                 data = response.data;
-               while (data.nsfw) {
-                response = await axios.get(url);
-                data = response.data;
-               }
+               
 
             }catch(error){
                     message.reply("Error"+error)
@@ -34,11 +31,12 @@ module.exports = class meme extends Commando.Command{              //extending C
 
             const embed = new MessageEmbed()
             .setColor('#00FF00')
-            .setTitle(`Meme`)
-            .addField("Title",data.title)
+            .setTitle("Axolotl")
             .setImage(data.url)
-
+            .setFooter("Powered by https://github.com/AxolotlAPI",`https://avatars.githubusercontent.com/u/87194724?s=60&v=4` )
             message.channel.send(embed)
+            
+
             
     }
 }

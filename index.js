@@ -4,7 +4,7 @@ const config = require('./config.json');                    //always define secr
 
 const client = new commando.CommandoClient({
     owner: config.botOwner,
-    commandPrefix: '.',
+    commandPrefix: '!',
 });
 
 client.on('ready', async () => {
