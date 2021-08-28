@@ -4,19 +4,19 @@ const config = require('./config.json');                    //always define secr
 
 const client = new commando.CommandoClient({
     owner: config.botOwner,
-    commandPrefix:'.',
+    commandPrefix: '.',
 });
 
-client.on('ready',async ()=>{
+client.on('ready', async () => {
     console.log("Bot online")
     client.registry
-    .registerGroups([
-        ['fun','Contains general commands'],                //register groups has an array which contains another array for command grouping as ['command-name','command-description'] 
-    
+        .registerGroups([
+            ['fun', 'Contains general commands'],                //register groups has an array which contains another array for command grouping as ['command-name','command-description'] 
 
-    ])
-    .registerDefaults()                                     //initializing default commands
-    .registerCommandsIn(path.join(__dirname,'botCommands')) //initializing custom commands
+
+        ])
+        .registerDefaults()                                     //initializing default commands
+        .registerCommandsIn(path.join(__dirname, 'botCommands')) //initializing custom commands
 })
 
 client.login(config.token);
