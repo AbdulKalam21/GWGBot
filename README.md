@@ -1,9 +1,9 @@
 <p>
     <br />
-    <img src="https://img.shields.io/badge/Made%20using-Java-red">
-    <img src="https://img.shields.io/badge/Made%20Using-JDA%20-yellow">
+    <img src="https://img.shields.io/badge/Made%20using-Javascript-red">
+    <img src="https://img.shields.io/badge/Made%20Using-discord.js%20-yellow">
     <img src="https://camo.githubusercontent.com/0fa78702c674a5e13004de53a25ae80ed1ce281f92c0e5d6bd5aa7701b3ab483/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f61746861756e2f454f532e737667">
-    <img src="https://github.com/AKDev21/GWGBot/actions/workflows/gradle.yml/badge.svg">
+   
 </p>
 
 <br />
@@ -34,18 +34,20 @@
 * [Contact](#contact)
 
 ### Built With
-* [JDA (Java Discord API)](https://github.com/DV8FromTheWorld/JDA)
+* [discord.js Commando SDK](https://github.com/discordjs/Commando)
 
 ### Prerequisites
-* Java 1.8 or above
-* Gradle 
+* node v14.17.5 or later
+* discord.js 12 or later
+* discord.js commando library 0.12.3 or later
 * A Discord Bot
 
 ### Project Setup
 ```
+- run `npm install` to install the dependencies
 - git clone https://github.com/AKDev21/GWGBot.git
 - cd GWGBot
-- gradlew run
+- `node index.js`
 ```
 - Using your favorite IDE or code editor, import this project as a gradle project.<br>
 - Add the bot token in the config.java file<br>

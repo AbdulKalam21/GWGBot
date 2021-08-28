@@ -1,10 +1,3 @@
-# Ignore Gradle project-specific cache directory
-.gradle
-.classpath
-.settings
-.project
+#ignore node_modules to bring down the repo size
+node_modules
 
-
-# Ignore Gradle build output directory
-build
-bin
