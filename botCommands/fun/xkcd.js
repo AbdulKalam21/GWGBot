@@ -30,7 +30,7 @@ module.exports = class yomama extends Commando.Command{              //extending
             }
 
             const embed = new MessageEmbed()
-            .setColor('#00FF00')
+            .setColor('64C9CF')
             .setTitle(data.safe_title)
             .setImage(data.img)
 

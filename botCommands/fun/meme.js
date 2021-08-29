@@ -33,7 +33,7 @@ module.exports = class meme extends Commando.Command{              //extending C
             }
 
             const embed = new MessageEmbed()
-            .setColor('#00FF00')
+            .setColor('FF67E7')
             .setTitle(`Meme`)
             .addField("Title",data.title)
             .setImage(data.url)
