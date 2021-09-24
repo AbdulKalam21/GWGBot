@@ -15,6 +15,7 @@ callback:({interaction})=>{
             .addField("Want your own bot?","email: eatitall2002@gmail.com to get a quote")
             .setColor('#22577A')
             return embed
+            
 }
 
 
