@@ -6,7 +6,7 @@ description:'Returns Pong',
 slash:true,
 testOnly:true,
 callback:({interaction})=>{
-    return 'pong'
+    return "pong"
 
 }
 
