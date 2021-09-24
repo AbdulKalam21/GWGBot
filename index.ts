@@ -1,4 +1,4 @@
-import DiscordJS, { Intents, MessageEmbed } from 'discord.js'
+import DiscordJS, { Intents, MessageEmbed, TextChannel } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 var config=require('./config.json')
@@ -32,7 +32,7 @@ client.on('guildMemberAdd',(member)=>{
   .setThumbnail(member.user.avatarURL.toString())
   .setTimestamp()
   console.log("Member joined")
-  member.guild.systemChannel?.send({embeds:[embed]})
+ // member.guild.systemChannel?.send({embeds:[embed]})
   
   
 })
@@ -54,12 +54,14 @@ client.on('messageDelete',(message)=>{
 
 
 client.on('messageUpdate',(oldMessage,newMessage)=>{
+  const {guild}=oldMessage;
   if (!oldMessage.guild) return;
   const embed=new MessageEmbed()
   .setColor('RED')
   .addField("Message Edited!",`**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n**${newMessage.author?.username}**`)
-
-  newMessage.channel.send({embeds:[embed]});
+  const channel=guild?.channels.cache.get(config.logChannel);
+  
+  (channel as TextChannel).send({embeds:[embed]});
 })
 
 
