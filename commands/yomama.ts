@@ -24,6 +24,7 @@ callback:async ({interaction})=>{
             .setColor('#00FF00')
             .setTitle(`Meme`)
             .addField("Yomama",data.joke)
+            .setTimestamp()
             
 
             

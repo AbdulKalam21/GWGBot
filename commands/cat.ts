@@ -24,6 +24,7 @@ callback:async ({interaction})=>{
             .setColor('#00FF00')
             .setTitle(`Random cat pic `)
             .setImage(data[0].url)
+            .setTimestamp()
 
            return embed
    

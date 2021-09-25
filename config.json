@@ -1,5 +1,5 @@
 {   
     "guildIDs":["786048655596847106","868405594187518003"],
-    "token":"<ENTER ZE TOKEN>",
-    "logChannel":"<Enter Ze Log Channel ID>"
+    "token":"<TOKEN>",
+    "logChannel":"<Log channel>"
 }
