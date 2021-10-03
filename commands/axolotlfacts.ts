@@ -25,7 +25,7 @@ callback:async ({interaction})=>{
        
            .addField("Axolotl Fact",data.facts,false)
             .setFooter("Powered by https://github.com/AxolotlAPI",`https://avatars.githubusercontent.com/u/87194724?s=60&v=4` )
-           
+           .setTimestamp()
            return embed
    
 

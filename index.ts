@@ -39,8 +39,22 @@ client.on('guildMemberAdd',(member)=>{
 
 
 client.on('messageDelete',(message)=>{
-  if (!message.guild) return;
+  if(message.author?.id===client.user?.id){
+    return;
+  }
 
+
+  if (!message.guild) return;
+  const embed=new MessageEmbed()
+    .setColor('RED')
+    .addField("Message Deleted!",`**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`)
+   .setTimestamp()
+   const {guild}=message;
+   const channel=guild?.channels.cache.get(config.logChannel);
+  
+  (channel as TextChannel).send({embeds:[embed]});
+   
+    
   if(message.mentions.members && message.mentions.members.size > 0){
     const embed=new MessageEmbed()
     .setColor('RED')
@@ -54,11 +68,14 @@ client.on('messageDelete',(message)=>{
 
 
 client.on('messageUpdate',(oldMessage,newMessage)=>{
+  if(oldMessage.author?.id===client.user?.id){
+    return;
+  }
   const {guild}=oldMessage;
   if (!oldMessage.guild) return;
   const embed=new MessageEmbed()
   .setColor('RED')
-  .addField("Message Edited!",`**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n**${newMessage.author?.username}**`)
+  .addField("ℹ Message Edited!",`**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n${newMessage.author?.username} (${newMessage.author?.id})\n**Channel**\n${newMessage.channel}`)
   const channel=guild?.channels.cache.get(config.logChannel);
   
   (channel as TextChannel).send({embeds:[embed]});

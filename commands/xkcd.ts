@@ -24,6 +24,7 @@ callback:async ({interaction})=>{
     .setColor('#64C9CF')
     .setTitle(data.safe_title)
     .setImage(data.img)
+    .setTimestamp()
 
     
            return embed
