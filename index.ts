@@ -18,7 +18,7 @@ client.on('ready', () => {
     // Allow importing of .ts files if you are using ts-node
     typeScript: true,
     testServers:config.guildIDs
-  })
+  }).setDefaultPrefix("!")
 })
 
 
@@ -37,7 +37,6 @@ client.on('guildMemberAdd',(member)=>{
   
 })
 
-
 client.on('messageDelete',(message)=>{
   if(message.author?.id===client.user?.id){
     return;
@@ -45,14 +44,16 @@ client.on('messageDelete',(message)=>{
 
 
   if (!message.guild) return;
-  const embed=new MessageEmbed()
-    .setColor('RED')
-    .addField("Message Deleted!",`**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`)
-   .setTimestamp()
+
+  const msg=`Message Deleted \n**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`
+  //const embed=new MessageEmbed()
+    //.setColor('RED')
+    //.addField("Message Deleted!",`**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`)
+   //.setTimestamp()
    const {guild}=message;
    const channel=guild?.channels.cache.get(config.logChannel);
   
-  (channel as TextChannel).send({embeds:[embed]});
+  (channel as TextChannel).send(msg);
    
     
   if(message.mentions.members && message.mentions.members.size > 0){
