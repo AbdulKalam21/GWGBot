@@ -6,7 +6,8 @@ description:'Returns Yes or No to a question',
 slash:true,
 testOnly:true,
 name:'8ball',
-
+minArgs:1,
+expectedArgs:'_query_',
 callback:({interaction,text})=>{
 
     var items = ["Yes","No"]
