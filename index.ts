@@ -45,7 +45,7 @@ client.on('messageDelete',(message)=>{
 
   if (!message.guild) return;
 
-  const msg=`Message Deleted \n**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`
+  var msg=`Message Deleted \n**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`
   //const embed=new MessageEmbed()
     //.setColor('RED')
     //.addField("Message Deleted!",`**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`)
@@ -57,12 +57,9 @@ client.on('messageDelete',(message)=>{
    
     
   if(message.mentions.members && message.mentions.members.size > 0){
-    const embed=new MessageEmbed()
-    .setColor('RED')
-    .addField("Ghost Ping Detected!",`**Deleted by** \n${message.author?.username} \n**Message** \n${message.content}`)
-   .setTimestamp()
-   
-    message.channel.send({embeds:[embed]})
+    const mentionedusers=message.mentions.toJSON()
+   msg=`**Ghost Ping Detected!**\n**Deleted by** \n${message.author?.username} \n**Message** \n${message.content} \n **Mentioned Users:** \n ${mentionedusers}`
+    message.channel.send(msg)
   }
   
 })
@@ -74,12 +71,9 @@ client.on('messageUpdate',(oldMessage,newMessage)=>{
   }
   const {guild}=oldMessage;
   if (!oldMessage.guild) return;
-  const embed=new MessageEmbed()
-  .setColor('RED')
-  .addField("ℹ Message Edited!",`**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n${newMessage.author?.username} (${newMessage.author?.id})\n**Channel**\n${newMessage.channel}`)
-  const channel=guild?.channels.cache.get(config.logChannel);
-  
-  (channel as TextChannel).send({embeds:[embed]});
+   const channel=guild?.channels.cache.get(config.logChannel);
+ const  msg=`ℹ Message Edited!\n**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n${newMessage.author?.username} (${newMessage.author?.id})\n**Channel**\n${newMessage.channel}`;
+  (channel as TextChannel).send(msg);
 })
 
 
