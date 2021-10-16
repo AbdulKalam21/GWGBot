@@ -8,6 +8,8 @@ const client = new DiscordJS.Client({
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+    Intents.FLAGS.GUILD_MEMBERS,
+    
   ],
 })
 
@@ -25,43 +27,60 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd',(member)=>{
   
-
+ 
   const embed=new MessageEmbed()
   .setColor('YELLOW')
-  .addField("Welcome",`Everyone welcome 👋 **${member.nickname}** to ${member.guild.name}`)
-  .setThumbnail(member.user.avatarURL.toString())
+  .addField("Welcome",`Everyone welcome 👋 **${member}** to ${member.guild.name}`)
+  .setThumbnail(member.user.displayAvatarURL())
   .setTimestamp()
-  console.log("Member joined")
- // member.guild.systemChannel?.send({embeds:[embed]})
+  
+  member.guild.systemChannel?.send({embeds:[embed]})
+ 
   
   
+})
+
+client.on('guildMemberRemove',(member)=>{
+  
+  const embed=new MessageEmbed()
+  .setColor('YELLOW')
+  .addField("Oh no",` **${member}** left 😢😿`)
+  .setTimestamp()
+  
+  member.guild.systemChannel?.send({embeds:[embed]})
 })
 
 client.on('messageDelete',(message)=>{
   if(message.author?.id===client.user?.id){
     return;
   }
-
+  if(message.author?.bot){
+    return;
+  }
 
   if (!message.guild) return;
-
+//#region DELETED MESSAGES
   var msg=`Message Deleted \n**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`
-  //const embed=new MessageEmbed()
-    //.setColor('RED')
-    //.addField("Message Deleted!",`**Deleted by** \n${message.author?.username} (${message.author?.id}) \n**Message** \n${message.content}`)
-   //.setTimestamp()
+
    const {guild}=message;
    const channel=guild?.channels.cache.get(config.logChannel);
   
   (channel as TextChannel).send(msg);
-   
-    
+   //#endregion
+
+//#region GHOST PING DETECTOR
+    var mentionsarr:string[]=[]
   if(message.mentions.members && message.mentions.members.size > 0){
-    const mentionedusers=message.mentions.toJSON()
-   msg=`**Ghost Ping Detected!**\n**Deleted by** \n${message.author?.username} \n**Message** \n${message.content} \n **Mentioned Users:** \n ${mentionedusers}`
+    const mentionedusers=JSON.parse(JSON.stringify(message.mentions.toJSON()))
+    mentionedusers['users'].forEach((x: string) => {
+      mentionsarr.push(`<@${x}>`)
+    });
+   msg=`**Ghost Ping Detected!**\n**Deleted by** \n${message.author?.username} \n**Message** \n${message.content} \n **Mentioned Users:** \n ${mentionsarr}`
     message.channel.send(msg)
   }
-  
+  //#endregion
+
+
 })
 
 
@@ -69,11 +88,32 @@ client.on('messageUpdate',(oldMessage,newMessage)=>{
   if(oldMessage.author?.id===client.user?.id){
     return;
   }
+  if(oldMessage.author?.bot){
+    return;
+  }
+
+  //#region EDITED MESSAGES
   const {guild}=oldMessage;
   if (!oldMessage.guild) return;
    const channel=guild?.channels.cache.get(config.logChannel);
  const  msg=`ℹ Message Edited!\n**oldMessage** \n${oldMessage} \n**newMessage** \n${newMessage}  \n** Responsible User**\n${newMessage.author?.username} (${newMessage.author?.id})\n**Channel**\n${newMessage.channel}`;
   (channel as TextChannel).send(msg);
+//#endregion
+
+
+
+//#region GHOST PING DETECTOR
+var mentionsarr:string[]=[]
+if(oldMessage.mentions.members && oldMessage.mentions.members?.size > 0 && oldMessage.mentions.members?.size>(newMessage.mentions.members?.size??0)){
+  const mentionedusers=JSON.parse(JSON.stringify(oldMessage.mentions.toJSON()))
+  mentionedusers['users'].forEach((x: string) => {
+    mentionsarr.push(`<@${x}>`)
+  });
+ const msg=`**Ghost Ping Detected!**\n**Deleted by** \n${oldMessage.author?.username} \n**Message** \n${oldMessage.content} \n **Mentioned Users:** \n ${mentionsarr}`
+  oldMessage.channel.send(msg)
+}
+//#endregion
+  
 })
 
 
