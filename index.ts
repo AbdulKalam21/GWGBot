@@ -96,7 +96,7 @@ client.on('messageUpdate',(oldMessage,newMessage)=>{
   const {guild}=oldMessage;
   if (!oldMessage.guild) return;
    const channel=guild?.channels.cache.get(config.logChannel);
- const  msg=`*Message Edited!*\n*oldMessage* \n \`\`\`${oldMessage}\`\`\` \n*newMessage* \n\`\`\`${newMessage}\`\`\`  \n*Responsible User*\n\`${newMessage.author?.username} (${newMessage.author?.id})\`\n*Channel*\n${newMessage.channel}`;
+ const  msg=`*Message Edited!*\n*oldMessage* \n \`\`\`${oldMessage}\`\`\` \n*newMessage* \n\`\`\`${newMessage}\`\`\`  \n*Responsible User*\n\`\`\`${newMessage.author?.username} (${newMessage.author?.id})\`\`\`\n*Channel*\n${newMessage.channel}`;
   (channel as TextChannel).send(msg);
 //#endregion
 
