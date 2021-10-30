@@ -57,10 +57,10 @@ client.on('messageDelete',(message)=>{
   if(message.author?.bot){
     return;
   }
-
+  const msgContent=message?.content?.slice(0,200)
   if (!message.guild) return;
 //#region DELETED MESSAGES
-  var msg=`*Message Deleted* \n*Deleted by* \n ${message.author?.username} (${message.author?.id}) \n*Message* \n\`\`\`${message.content}\`\`\`` 
+  var msg=`*Message Deleted* \n*Deleted by* \n ${message.author?.username} (${message.author?.id}) \n*Message* \n\`\`\`${msgContent}\`\`\`` 
 
    const {guild}=message;
    const channel=guild?.channels.cache.get(config.logChannel);
@@ -75,7 +75,7 @@ client.on('messageDelete',(message)=>{
     mentionedusers['users'].forEach((x: string) => {
       mentionsarr.push(`<@${x}>`)
     });
-   msg=`*Ghost Ping Detected!*\n*Deleted by* \n${message.author?.username} \n*Message* \n${message.content} \n *Mentioned Users:* \n ${mentionsarr}`
+   msg=`*Ghost Ping Detected!*\n*Deleted by* \n${message.author?.username} \n*Message* \n${msgContent} \n *Mentioned Users:* \n ${mentionsarr}`
     message.channel.send(msg)
   }
   //#endregion
@@ -96,7 +96,9 @@ client.on('messageUpdate',(oldMessage,newMessage)=>{
   const {guild}=oldMessage;
   if (!oldMessage.guild) return;
    const channel=guild?.channels.cache.get(config.logChannel);
- const  msg=`*Message Edited!*\n*oldMessage* \n \`\`\`${oldMessage}\`\`\` \n*newMessage* \n\`\`\`${newMessage}\`\`\`  \n*Responsible User*\n\`\`\`${newMessage.author?.username} (${newMessage.author?.id})\`\`\`\n*Channel*\n${newMessage.channel}`;
+   const oldmsgContent=oldMessage?.content?.slice(0,200)
+   const newmsgContent=newMessage?.content?.slice(0,200)
+ const  msg=`*Message Edited!*\n*oldMessage* \n \`\`\`${oldmsgContent} ...\`\`\` \n*newMessage* \n\`\`\`${newmsgContent}\`\`\`  \n*Responsible User*\n\`\`\`${newMessage.author?.username} (${newMessage.author?.id})\`\`\`\n*Channel*\n${newMessage.channel}`;
   (channel as TextChannel).send(msg);
 //#endregion
 
@@ -109,7 +111,8 @@ if(oldMessage.mentions.members && oldMessage.mentions.members?.size > 0 && oldMe
   mentionedusers['users'].forEach((x: string) => {
     mentionsarr.push(`<@${x}>`)
   });
- const msg=`*Ghost Ping Detected!*\n*Changed by* \n${oldMessage.author?.username} \n*Message* \n${oldMessage.content} \n *Mentioned Users:* \n ${mentionsarr}`
+  const msgContent=oldMessage?.content?.slice(0,200)
+ const msg=`*Ghost Ping Detected!*\n*Changed by* \n${oldMessage.author?.username} \n*Message* \n${msgContent} ... \n *Mentioned Users:* \n ${mentionsarr}`
   oldMessage.channel.send(msg)
 }
 //#endregion
