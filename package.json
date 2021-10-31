@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.ts",
-    "start":"ts-node index.ts"
+    "start": "ts-node index.ts"
   },
   "engines": {
     "node": ">=16.8.0"
@@ -19,6 +19,6 @@
     "discord.js": "^13.1.0",
     "ts-node": "^10.3.0",
     "typescript": "^4.4.3",
-    "wokcommands": "^1.3.94"
+    "wokcommands": "^1.5.3"
   }
 }

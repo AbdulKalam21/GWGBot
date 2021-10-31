@@ -5,7 +5,7 @@ import { ICommand } from "wokcommands";
 export default{
 category:'Fun',
 description:'Sends a random Cat pic',
-
+slash:true,
 testOnly:true,
 callback:async ({interaction,message})=>{
     const url = "https://api.thecatapi.com/v1/images/search";

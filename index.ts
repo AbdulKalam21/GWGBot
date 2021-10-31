@@ -1,4 +1,4 @@
-import DiscordJS, { Intents, MessageEmbed, TextChannel } from 'discord.js'
+import DiscordJS, { Emoji, Intents, MessageEmbed, TextChannel } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
 var config=require('./config.json')
@@ -16,11 +16,14 @@ const client = new DiscordJS.Client({
 client.on('ready', () => {
   new WOKCommands(client, {
     // The name of the local folder for your command files
-    commandsDir: path.join(__dirname, 'commands'),
+    commandsDir: path.join(__dirname, '/commands'),
     // Allow importing of .ts files if you are using ts-node
     typeScript: true,
-    testServers:config.guildIDs
-  }).setDefaultPrefix("!")
+    testServers:config.guildIDs,
+  })
+  
+  .setDefaultPrefix("!")
+  
 })
 
 
