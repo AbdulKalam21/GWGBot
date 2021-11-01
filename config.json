@@ -1,5 +1,6 @@
 {   
-    "guildIDs": "",
-    "token": "",
-    "logChannel": ""
+    "guildIDs":["786048655596847106","868405594187518003"],
+    "token":"<TOKEN>",
+    "logChannel":"890954095521845278",
+    "mongodbstr":"<MONGODB_URI>"
 }
