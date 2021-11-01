@@ -1,6 +1,7 @@
 import DiscordJS, { Emoji, Intents, MessageEmbed, TextChannel } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
+import mongoose from 'mongoose'
 var config=require('./config.json')
 const client = new DiscordJS.Client({
   // These intents are recommended for the built in help menu
@@ -13,16 +14,28 @@ const client = new DiscordJS.Client({
   ],
 })
 
-client.on('ready', () => {
+client.on('ready', async () => {
+
+  
+
   new WOKCommands(client, {
     // The name of the local folder for your command files
     commandsDir: path.join(__dirname, '/commands'),
     // Allow importing of .ts files if you are using ts-node
     typeScript: true,
     testServers:config.guildIDs,
+    mongoUri:config.mongodbstr,
+    dbOptions:{
+      keepAlive:true
+    }
   })
   
   .setDefaultPrefix("!")
+  .setCategorySettings([
+    {
+        name: 'Helpers',
+        emoji: '👷‍♀️'
+    },])
   
 })
 
