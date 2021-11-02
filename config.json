@@ -1,6 +1,6 @@
 {   
-    "guildIDs":["786048655596847106","868405594187518003"],
-    "token":"<TOKEN>",
-    "logChannel":"890954095521845278",
-    "mongodbstr":"<MONGODB_URI>"
+    "guildIDs": "ID_OF_THE_SERVER",
+    "token": "BOT_TOKEN",
+    "logChannel":"ID_OF_THE_LOG_CHANNEL",
+    "mongodbstr":"MONGODB_URI"
 }
