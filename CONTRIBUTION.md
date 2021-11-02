@@ -25,3 +25,4 @@ The `commands/leaderboard/schema` folder contains the schemas("blueprint") in wh
 - New command files should be named as `<command_name>.ts` preferably
 - Each new command should contain a docstring at the start documenting the purpose of the command
 - All files must be appropiately commented to help future contributors
+- The project can be tested by running `npm run dev` (requires nodemon to be installed seperately) use `npm run start` to run the project without nodemon
