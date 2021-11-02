@@ -10,15 +10,15 @@
 * [Contact](#contact)
 
 ### Built With
-* [Discord.js Commando SDK](https://github.com/discordjs/Commando)
+* [Discord.js v13](https://discord.js.org/#/)
 
 ### Prerequisites
-* Node v14.17.5 or later
+* Node v16.8.0 or later
 * A Discord Bot
 
 ### Project Setup
 ```
-- git clone https://github.com/AKDev21/GWGBot.git
+- git clone https://github.com/GWGBot/GWGBot.git
 - cd GWGBot
 - npm install
 - npm run dev
