@@ -48,6 +48,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+### Roadmap
+
+[Trello Board](https://trello.com/b/7Fpjf2hq/gwg-bot)
+
 
 ### Contact
 - [GamesWithGame Discord Server](https://discord.gg/dhyV3BXkRZ)
