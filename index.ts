@@ -136,4 +136,4 @@ if(oldMessage.mentions.members && oldMessage.mentions.members?.size > 0 && oldMe
 })
 
 
-client.login(config.token)
+client.login(config.token!process.env.BOT_TOKEN)
