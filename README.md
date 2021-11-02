@@ -1,27 +1,3 @@
-<p>
-    <br />
-    <img src="https://img.shields.io/badge/Made%20using-Javascript-red">
-    <img src="https://img.shields.io/badge/Made%20Using-discord.js%20-yellow">
-    <img src="https://camo.githubusercontent.com/0fa78702c674a5e13004de53a25ae80ed1ce281f92c0e5d6bd5aa7701b3ab483/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f61746861756e2f454f532e737667">
-   
-</p>
-
-<br />
-<p align="center">
-  <h2 align="center">GWGBot</h2>
-
-  <p align="center">
-    GWGBot is a Discord Bot developed by the Games with Gabe <a href="https://discord.gg/dhyV3BXkRZ">Discord</a>/<a href="https://www.youtube.com/channel/UCQP4qSCj1eHMHisDDR4iPzw">YouTube</a> community.
-    <br />
-    <a href=""><strong>Explore the docs »</strong></a><br><br>
-    <a href="">Features</a>
-    ·
-    <a href="https://github.com/AKDev21/GWGBot/issues">Report Bug</a>
-    ·
-    <a href="https://trello.com/b/7Fpjf2hq/gwg-bot">Check the Trello</a>
-  </p>
-</p>
-
 
 <!-- TABLE OF CONTENTS -->
 # Table of Contents
@@ -44,15 +20,34 @@
 ```
 - git clone https://github.com/AKDev21/GWGBot.git
 - cd GWGBot
-- run `npm install` to install the dependencies
-- `node index.js`
+- npm install
+- npm run dev
 ```
-- Using your favorite IDE or code editor, import this project as a gradle project.<br>
-- Add the bot token in the config.json file<br>
-- Run `node index.js` to run the bot <br>
 
 ### License
-Copyright (c) 2021 MIT License
+```
+MIT License
+
+Copyright (c) 2021 Games with Gabe Community
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ### Contact
-[Discord Server](https://discord.gg/dhyV3BXkRZ)
+- [GamesWithGame Discord Server](https://discord.gg/dhyV3BXkRZ)
