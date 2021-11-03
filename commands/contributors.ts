@@ -1,3 +1,7 @@
+/**
+ * Contains names of important contributors(repository maintainers
+ *  and those with over a 100 commits in code)
+ */
 import DiscordJS,{ MessageActionRow, MessageButton, MessageEmbed } from "discord.js";
 import { ICommand } from "wokcommands";
 
@@ -8,14 +12,6 @@ slash:true,
 testOnly:true,
 callback:({interaction: msgInt,channel})=>{
 
-    const row=new MessageActionRow()
-    .addComponents(
-        new MessageButton()
-        .setURL("https://ko-fi.com/lioncatdevstudio")
-        .setLabel("Support the Dev")
-        .setStyle('LINK')
-    )
-
 
     const embed=new MessageEmbed()
             .setTitle("Hello I am GwG bot")
@@ -25,7 +21,7 @@ callback:({interaction: msgInt,channel})=>{
             .addField("Want your own bot?","email: eatitall2002@gmail.com to get a quote")
             .setColor('#22577A')
             .setTimestamp()
-            msgInt.reply({embeds:[embed],components:[row]})
+            msgInt.reply({embeds:[embed]})
             
 }
 
