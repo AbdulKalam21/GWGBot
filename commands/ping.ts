@@ -1,3 +1,6 @@
+/**
+ * For testing the bot
+ */
 import { ICommand } from "wokcommands";
 
 export default{

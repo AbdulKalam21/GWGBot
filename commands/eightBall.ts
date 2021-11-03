@@ -1,3 +1,7 @@
+/**
+ * 8 ball command
+ */
+
 import { ICommand } from "wokcommands";
 
 export default{
