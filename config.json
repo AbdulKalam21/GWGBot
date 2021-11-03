@@ -1,6 +1,6 @@
 {   
     "guildIDs": "ID_OF_THE_SERVER",
     "token": "BOT_TOKEN",
-    "logChannel":"ID_OF_THE_LOG_CHANNEL",
+    "logChannel":"786051193490636801",
     "mongodbstr":"MONGODB_URI"
 }

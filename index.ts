@@ -23,8 +23,8 @@ client.on('ready', async () => {
     commandsDir: path.join(__dirname, '/commands'),
     // Allow importing of .ts files if you are using ts-node
     typeScript: true,
-    testServers:config.guildIDs,
-    mongoUri:config.mongodbstr,
+    testServers:["786048655596847106","868405594187518003"],
+    mongoUri:process.env.MONGODB_URI,
     dbOptions:{
       keepAlive:true
     }
@@ -136,4 +136,4 @@ if(oldMessage.mentions.members && oldMessage.mentions.members?.size > 0 && oldMe
 })
 
 
-client.login(config.token!process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN)
