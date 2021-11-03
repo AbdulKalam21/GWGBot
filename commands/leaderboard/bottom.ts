@@ -4,11 +4,11 @@ import schema from './schema/lead-schema';
 import Table from 'cli-table3';
 export default{
 category:'Helpers',
-description:'Top thanked users',
-aliases:['leaderboard'],
-//slash:true,
+description:'Top thanked users from the bottom',
+aliases:['btleaderboard'],
+
 testOnly:true,
-name:'top',
+name:'bottom',
 
 callback:({message})=>{
         var msg;
@@ -20,7 +20,7 @@ callback:({message})=>{
             },
         });
         setTimeout(async ()=>{
-          schema.find().sort({ thnx: -1 }).limit(10).exec((err,res)=>{
+          schema.find().sort({ thnx: 1 }).limit(10).exec((err,res)=>{
             if(err){
                 console.log(err);
             }
