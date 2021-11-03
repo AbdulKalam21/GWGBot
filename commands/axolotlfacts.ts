@@ -1,3 +1,6 @@
+/**
+ * Shows Axolotl facts
+ */
 import axios from "axios";
 import { MessageEmbed } from "discord.js";
 import { ICommand } from "wokcommands";

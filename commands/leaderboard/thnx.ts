@@ -1,4 +1,6 @@
-
+/**
+ * Thank the person who helped
+ */
 import { ICommand } from "wokcommands";
 import schema from './schema/lead-schema';
 export default{

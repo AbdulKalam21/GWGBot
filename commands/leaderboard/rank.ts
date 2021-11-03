@@ -1,4 +1,6 @@
-
+/*
+Shows the Rank of the user
+*/
 import { ICommand } from "wokcommands";
 import schema from './schema/lead-schema';
 export default{

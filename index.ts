@@ -1,3 +1,7 @@
+/*
+Entry point of Bot along with Member join, member leave, delete message and edited message detection
+*/
+
 import DiscordJS, { Emoji, Intents, MessageEmbed, TextChannel } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'

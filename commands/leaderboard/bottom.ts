@@ -1,4 +1,6 @@
-
+/*
+Lists the Top thanked users from the Bottom
+*/
 import { ICommand } from "wokcommands";
 import schema from './schema/lead-schema';
 import Table from 'cli-table3';
