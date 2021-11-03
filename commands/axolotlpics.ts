@@ -1,3 +1,6 @@
+/**
+ * Sends axolotl pics
+ */
 import axios from "axios";
 import { MessageEmbed } from "discord.js";
 import { ICommand } from "wokcommands";
