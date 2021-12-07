@@ -13,5 +13,7 @@ public class Constants {
 	public static final String INTRODUCTION_CHANNEL_ID = "";
 	
 	public static final String SELF_ROLES_CHANNEL_ID = "";
+	
+	public static final String SERVER_FEEDBACK_CHANNEL_ID = "";
 
 }
