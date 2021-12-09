@@ -6,6 +6,8 @@ public class Constants {
 	
 	public static String PREFIX = "!";
 	
+	public static final String GUILD_ID = "";
+	
 	public static final String WELCOME_CHANNEL_ID = "";
 	
 	public static final String RULES_CHANNEL_ID = "";

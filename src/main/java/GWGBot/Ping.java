@@ -1,16 +1,16 @@
 package GWGBot;
 
-import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.events.interaction.SlashCommandEvent;
 
 public class Ping {
 
-	public Ping(Message msg){
+	public Ping(SlashCommandEvent event){
 		
 		long time = System.currentTimeMillis();
-
-		msg.getChannel().sendMessage("Pong!").queue(response -> {
-				response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue();
-		});
+		
+		event.reply("pong").flatMap(v -> 
+					event.getHook().editOriginalFormat("Pong: %d ms", System.currentTimeMillis() - time)
+				).queue();		
 		
 	}
 
