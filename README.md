@@ -9,6 +9,7 @@ GWGBot is a Discord Bot developed by the GameswithGabe Discord/YouTube community
 * [Prerequisites](#prerequisites)
 * [Project Setup](#project-setup)
 * [Issues](https://github.com/AKDev21/GWGBot/issues)
+* [TODO](#TODO)
 * [License](#license)
 * [Contact](#contact)
 
@@ -27,6 +28,14 @@ GWGBot is a Discord Bot developed by the GameswithGabe Discord/YouTube community
 - git checkout java
 - gradlew run
 ```
+
+### TODO
+- latex rendering support
+- pin command( assigned to @AKDev21 )
+- twitch and yt integeration
+- reputation system
+- reaction roles
+- suggestion command
 
 ### License
 ```
