@@ -36,6 +36,7 @@ GWGBot is a Discord Bot developed by the GameswithGabe Discord/YouTube community
 - reputation system
 - reaction roles
 - suggestion command
+- anti spam
 
 ### License
 ```
