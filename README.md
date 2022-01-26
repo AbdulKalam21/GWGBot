@@ -10,7 +10,7 @@
 * [Contact](#contact)
 
 ### Built With
-* [Discord.js v13](https://discord.js.org/#/)
+* [Enhanced-discord.py](https://github.com/iDevision/enhanced-discord.py)
 
 ### Prerequisites
 * Node v16.8.0 or later
@@ -18,10 +18,12 @@
 
 ### Project Setup
 ```
-- git clone https://github.com/GWGBot/GWGBot.git
-- cd GWGBot
-- npm install
-- npm run dev
+- `git clone https://github.com/GWGBot/GWGBot.git`
+- `cd GWGBot\GWGbot_env`
+- `GWGbot_env\Scripts\activate`
+- `pip install -r requirements.txt`
+- `python3 src\main.py` <- If on Linux/Mac
+- `python src\main.py` <- If on windows
 ```
 
 ### License

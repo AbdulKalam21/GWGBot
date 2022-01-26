@@ -1,4 +1,0 @@
-#ignore node_modules to bring down the repo size
-
-node_modules
-.env
