@@ -1,1 +1,3 @@
-GWGbot_env
+env
+.env
+src\commands\__pycache__

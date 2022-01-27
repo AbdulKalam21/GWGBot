@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix='>',
                 slash_command_guilds=test_server,
                 slash_commands=True,
                 intents=discord.Intents.all())
-
+print(bot.slash_commands)
 @bot.event
 async def on_ready():
     print("Bot online!")
@@ -31,12 +31,6 @@ async def on_member_join(member):
     embed.set_thumbnail(url=member.avatar_url)
     
     await member.guild.system_channel.send(embed=embed)
-
-@bot.command()
-async def ping(ctx: commands.Context):
-    
-        await ctx.send("Pong!")
-
 
 
 load_dotenv('.env')
