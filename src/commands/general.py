@@ -1,6 +1,7 @@
 import discord,random,os
 from discord.ext import commands
 import discord.utils
+
 class general(commands.Cog):
     def __init__(self,bot) -> None:
         self.bot=bot

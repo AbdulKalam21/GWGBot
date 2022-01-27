@@ -2,7 +2,9 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
-test_server=[868405594187518003]
+
+#______________________________________________________________________________________________________________
+# Logging
 import logging
 
 logger = logging.getLogger('discord')
@@ -11,16 +13,23 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
+
+#_______________________________________________________________________________________________________________
+#Bot initialization and ready events
+test_server=[868405594187518003]
 bot = commands.Bot(command_prefix='>',
                 slash_command_guilds=test_server,
                 slash_commands=True,
                 intents=discord.Intents.all())
-print(bot.slash_commands)
+
 @bot.event
 async def on_ready():
     print("Bot online!")
     bot.load_extension('commands.general')
 
+
+#______________________________________________________________________________________________________________
+#Bot Welcome, leave, Ghost Ping, Delete message events
 @bot.event
 async def on_member_join(member):
     embed=discord.Embed(title=f'Welcome to Games With Gabe `{member.name}`',
@@ -32,7 +41,8 @@ async def on_member_join(member):
     
     await member.guild.system_channel.send(embed=embed)
 
-
+#_______________________________________________________________________________________________________________
+#Bot runner
 load_dotenv('.env')
 
 bot.run(os.getenv('TOKEN'))
