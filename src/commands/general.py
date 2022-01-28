@@ -16,7 +16,7 @@ class general(commands.Cog):
     @commands.command()
     async def suggest(self,ctx:commands.Context,*,msg):
         #Suggest channel stuff
-        channel=discord.utils.get(ctx.guild.channels,id=868405594187518007)
+        channel=discord.utils.get(ctx.guild.channels,id=int('868405594187518007'))
 
         embed=discord.Embed(title=f'New Suggestion by {ctx.author.name}',
                         description=msg,
@@ -25,7 +25,7 @@ class general(commands.Cog):
         #Replying to suggestor
         await ctx.send("Idea suggested successfully!")
 
-        
+
 #_______________________________________________________________________________________________________________
 # Bot setup       
 def setup(bot):

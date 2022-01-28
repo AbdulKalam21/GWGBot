@@ -21,6 +21,7 @@ bot = commands.Bot(command_prefix='>',
                 intents=discord.Intents.all())
 
 #Don't touch! need to check if the correct library is running or not
+#Will return true if the library is correct
 print(bot.slash_commands)
 
 bot.load_extension('commands.general') #Load extensions before on_ready to access slash commands
