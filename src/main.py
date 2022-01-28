@@ -19,8 +19,11 @@ bot = commands.Bot(command_prefix='>',
                 slash_command_guilds=test_server,
                 slash_commands=True,
                 intents=discord.Intents.all())
-                
-bot.load_extension('commands.general')
+
+#Don't touch! need to check if the correct library is running or not
+print(bot.slash_commands)
+
+bot.load_extension('commands.general') #Load extensions before on_ready to access slash commands
 @bot.event
 async def on_ready():
     print("Bot online!")
@@ -36,6 +39,7 @@ async def on_member_join(member):
                                     - Introduce yourself #introductions\n \
                                     - Get some roles self-roles',
                         color=discord.Colour.green_apple())
+
     embed.set_thumbnail(url=member.avatar_url)
     
     await member.guild.system_channel.send(embed=embed)
