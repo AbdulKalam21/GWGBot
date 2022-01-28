@@ -12,8 +12,6 @@ logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
-
-
 #_______________________________________________________________________________________________________________
 #Bot initialization and ready events
 test_server=[868405594187518003]
@@ -21,11 +19,12 @@ bot = commands.Bot(command_prefix='>',
                 slash_command_guilds=test_server,
                 slash_commands=True,
                 intents=discord.Intents.all())
-
+                
+bot.load_extension('commands.general')
 @bot.event
 async def on_ready():
     print("Bot online!")
-    bot.load_extension('commands.general')
+    
 
 
 #______________________________________________________________________________________________________________
