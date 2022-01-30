@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "src/": "./src/",
+    "cmd/": "./src/cmd/",
+    "event/": "./src/event/",
+    "data/": "./data/",
+    "std/": "https://deno.land/std@0.119.0/",
+    "lib/": "https://deno.land/x/"
+  }
+}
