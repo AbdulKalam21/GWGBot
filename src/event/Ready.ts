@@ -4,6 +4,8 @@ import {
 } from "lib/harmony/mod.ts"
 
 class Ready extends Extension {
+  name = Ready.name;
+
   constructor(cc: CommandClient) {
     super(cc);
 

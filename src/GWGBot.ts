@@ -1,6 +1,7 @@
 import { CommandClient } from "lib/harmony/mod.ts";
 
 import Ready from "event/Ready.ts"
+import Welcome from "event/Welcome.ts"
 import HandleCmd from "cmd/mod.ts"
 
 class GWGBot extends CommandClient {
@@ -15,6 +16,7 @@ class GWGBot extends CommandClient {
 
     // Register all events
     this.extensions.load(Ready)
+    this.extensions.load(Welcome)
 
     // Register all commands
     this.extensions.load(HandleCmd)

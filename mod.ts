@@ -10,6 +10,7 @@ const bot = new GWGBot();
 bot.connect(
   token.token, [
     GatewayIntents.GUILDS,
+    GatewayIntents.GUILD_MEMBERS,
     GatewayIntents.GUILD_MESSAGES
   ]
 )
