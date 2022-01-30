@@ -1,3 +1,6 @@
+# GWGBot
+GWGBot is a Discord Bot developed by the GameswithGabe Discord/YouTube community for the GamesWtihGabe Discord Server.
+
 
 <!-- TABLE OF CONTENTS -->
 # Table of Contents
@@ -6,24 +9,34 @@
 * [Prerequisites](#prerequisites)
 * [Project Setup](#project-setup)
 * [Issues](https://github.com/AKDev21/GWGBot/issues)
+* [TODO](#TODO)
 * [License](#license)
 * [Contact](#contact)
 
 ### Built With
-* [Enhanced-discord.py](https://github.com/iDevision/enhanced-discord.py)
+* [JDA](https://github.com/DV8FromTheWorld/JDA)
 
 ### Prerequisites
-* Python 3.8.10(WARNING! python 3.10 is known to cause weird errors in the asyncio lib you might need to update it)
+* JDK
+* Gradle
 * A Discord Bot
 
 ### Project Setup
+```
+- git clone https://github.com/GWGBot/GWGBot.git
+- cd GWGBot
+- git checkout java
+- gradlew run
+```
 
-- `git clone https://github.com/GWGBot/GWGBot.git`
-- `cd GWGBot\GWGbot_env`
-- `GWGbot_env\Scripts\activate`
-- `pip install -r requirements.txt`
-- `python3 src\main.py` <- If on Linux/Mac
-- `python src\main.py` <- If on windows
+### TODO
+- latex rendering support
+- pin command( assigned to @AKDev21 )
+- twitch and yt integeration
+- reputation system
+- reaction roles
+- suggestion command
+- anti spam
 
 ### License
 ```
@@ -49,10 +62,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-### Roadmap
-
-[Trello Board](https://trello.com/b/7Fpjf2hq/gwg-bot)
-
-
 ### Contact
-- [GamesWithGame Discord Server](https://discord.gg/dhyV3BXkRZ)
+- [GamesWithGabe Discord Server](https://discord.gg/dhyV3BXkRZ)
