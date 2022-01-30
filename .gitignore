@@ -1,4 +1,5 @@
-#ignore node_modules to bring down the repo size
+# Ignore Gradle project-specific cache directory
+.gradle
 
-node_modules
-.env
+# Ignore Gradle build output directory
+build
