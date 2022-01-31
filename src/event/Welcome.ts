@@ -12,7 +12,7 @@ class Welcome extends Extension {
       const guild = await this.client.guilds.get(data.guild.id);
 
       if (guild != undefined) {
-        const welcome = await guild.channels.get(data.guild.welcome);
+        const welcome = await guild.channels.get(data.guild.channels.welcome);
 
         if (welcome != undefined) {
           if (welcome.isText()) {
@@ -21,14 +21,11 @@ class Welcome extends Extension {
               .setTitle(`${member.displayName} welcome to ${guild.name}!`)
               .setThumbnail(member.user.avatarURL())
               .setDescription(
-                `- Read the rules <#${data.guild.rules}>\n` +
-                  `- Get some roles <#${data.guild.roles}>\n` +
-                  `- Introduce yourself at <#${data.guild.introduce}>`,
+                `- Read the rules <#${data.guild.channels.rules}>\n` +
+                `- Get some roles <#${data.guild.channels.roles}>\n` +
+                `- Introduce yourself at <#${data.guild.channels.introduce}>`,
               )
-              .setFooter(
-                `You are our ${guild.memberCount}th member`,
-                guild.iconURL(),
-              );
+              .setFooter(`You are our ${guild.memberCount}th member`, guild.iconURL());
 
             await welcome.send({ embed: payload });
           } else {

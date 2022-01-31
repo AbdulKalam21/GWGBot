@@ -3,14 +3,17 @@ const config = Deno.readTextFileSync("data/config.json");
 const data = {
   bot: {
     token: JSON.parse(config).token,
+    embedColor: "#2aa088",
   },
   guild: {
     id: "",
-    rules: "",
-    roles: "",
-    welcome: "",
-    feedback: "",
-    introduce: "",
+    channels: {
+      rules: "",
+      roles: "",
+      welcome: "",
+      feedback: "",
+      introduce: "",
+    },
   },
 };
 
