@@ -9,6 +9,7 @@ const data = {
     rules: "",
     roles: "",
     welcome: "",
+    feedback: "",
     introduce: "",
   },
 };

@@ -1,11 +1,6 @@
-import {
-  Embed,
-  Member,
-  Extension,
-  CommandClient,
-} from "lib/harmony/mod.ts";
+import { CommandClient, Embed, Extension, Member } from "lib/harmony/mod.ts";
 
-import data from "data/mod.ts"
+import data from "data/mod.ts";
 
 class Welcome extends Extension {
   name = Welcome.name;
@@ -26,21 +21,24 @@ class Welcome extends Extension {
               .setTitle(`${member.displayName} welcome to ${guild.name}!`)
               .setThumbnail(member.user.avatarURL())
               .setDescription(
-                `- Read the rules <#${data.guild.rules}>\n`
-                + `- Get some roles <#${data.guild.roles}>\n`
-                + `- Introduce yourself at <#${data.guild.introduce}>`
+                `- Read the rules <#${data.guild.rules}>\n` +
+                  `- Get some roles <#${data.guild.roles}>\n` +
+                  `- Introduce yourself at <#${data.guild.introduce}>`,
               )
-              .setFooter(`You are our ${guild.memberCount}th member`, guild.iconURL())
+              .setFooter(
+                `You are our ${guild.memberCount}th member`,
+                guild.iconURL(),
+              );
 
             await welcome.send({ embed: payload });
           } else {
-            throw new Error("Selected channel is not a text channel")
+            throw new Error("Selected channel is not a text channel");
           }
         } else {
-          throw new Error("Channel ID is invalid or undefined")
+          throw new Error("Channel ID is invalid or undefined");
         }
       } else {
-        throw new Error("Guild ID is invalid or undefined")
+        throw new Error("Guild ID is invalid or undefined");
       }
     });
   }

@@ -1,7 +1,4 @@
-import {
-  Extension,
-  CommandClient
-} from "lib/harmony/mod.ts"
+import { CommandClient, Extension } from "lib/harmony/mod.ts";
 
 class Ready extends Extension {
   name = Ready.name;
@@ -10,12 +7,12 @@ class Ready extends Extension {
     super(cc);
 
     this.listen("ready", () => {
-      console.log(`Logged in as ${this.client.user?.tag}`)
+      console.log(`Logged in as ${this.client.user?.tag}`);
 
       this.client.setPresence({
         activity: {
           name: "Games With Gabe",
-          type: "PLAYING"
+          type: "PLAYING",
         },
       });
     });

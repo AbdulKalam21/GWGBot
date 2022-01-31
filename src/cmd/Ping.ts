@@ -1,8 +1,4 @@
-import {
-  Command,
-  CommandContext,
-  CommandOptions
-} from "lib/harmony/mod.ts";
+import { Command, CommandContext, CommandOptions } from "lib/harmony/mod.ts";
 
 class Ping extends Command {
   static cmd = Ping.name;
