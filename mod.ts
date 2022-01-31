@@ -2,13 +2,14 @@
 
 import { GatewayIntents } from "lib/harmony/mod.ts";
 
-import token from "data/mod.ts";
+import data from "data/mod.ts";
 import GWGBot from "src/GWGBot.ts";
 
 const bot = new GWGBot();
+const token = data.bot.token;
 
 bot.connect(
-  token.token, [
+  token, [
     GatewayIntents.GUILDS,
     GatewayIntents.GUILD_MEMBERS,
     GatewayIntents.GUILD_MESSAGES
