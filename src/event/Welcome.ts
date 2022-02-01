@@ -17,7 +17,7 @@ class Welcome extends Extension {
         if (welcome != undefined) {
           if (welcome.isText()) {
             const payload = new Embed()
-              .setColor("#2aa088")
+              .setColor(data.bot.embedColor)
               .setTitle(`${member.displayName} welcome to ${guild.name}!`)
               .setThumbnail(member.user.avatarURL())
               .setDescription(
@@ -32,10 +32,10 @@ class Welcome extends Extension {
             throw new Error("Selected channel is not a text channel");
           }
         } else {
-          throw new Error("Channel ID is invalid or undefined");
+          throw new Error("Channel ID is undefined");
         }
       } else {
-        throw new Error("Guild ID is invalid or undefined");
+        throw new Error("Guild ID is undefined");
       }
     });
   }

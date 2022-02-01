@@ -1,8 +1,10 @@
 import { CommandClient } from "lib/harmony/mod.ts";
 
+import HandleCmd from "cmd/mod.ts";
+
 import Ready from "event/Ready.ts";
 import Welcome from "event/Welcome.ts";
-import HandleCmd from "cmd/mod.ts";
+import LogDeleted from "event/LogDeleted.ts";
 
 class GWGBot extends CommandClient {
   constructor() {
@@ -14,12 +16,13 @@ class GWGBot extends CommandClient {
       mentionPrefix: false,
     });
 
+    // Register all commands
+    this.extensions.load(HandleCmd);
+
     // Register all events
     this.extensions.load(Ready);
     this.extensions.load(Welcome);
-
-    // Register all commands
-    this.extensions.load(HandleCmd);
+    this.extensions.load(LogDeleted);
   }
 }
 

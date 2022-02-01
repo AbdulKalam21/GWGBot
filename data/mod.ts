@@ -8,10 +8,10 @@ const data = {
   guild: {
     id: "",
     channels: {
+      logs: "",
       rules: "",
       roles: "",
       welcome: "",
-      feedback: "",
       introduce: "",
     },
   },
