@@ -1,5 +1,5 @@
 const Constants = {
-    BOT_TOKEN: "OTAxMzE0ODQxMDc4MjgwMjIy.YXOE2w.VVYbUzHQqPY33MmEAuC3-5Zm_qs",
+    BOT_TOKEN: Deno.env.get("BOT_TOKEN"),
     GUILD_ID: "",
     LOGGING_CHANNEL_ID: "",
     RULES_CHANNEL_ID: "",
