@@ -1,13 +1,7 @@
-import { 
-    CommandClient,
-    Command,
-    CommandContext,
-    Client,
-    Message,
-    GatewayIntents
-} from "https://deno.land/x/harmony/mod.ts"
-
-import Constants from "./Constants.ts"
+import { CommandClient, Command, CommandContext, Client, Message, GatewayIntents, Member } from "Harmony"
+import Constants from "Common/Constants.ts"
+import Ping from "Commands/Ping.ts"
+import About from "Commands/About.ts"
 
 const GWGBot = new CommandClient({
     prefix: "!",
@@ -15,19 +9,20 @@ const GWGBot = new CommandClient({
     allowBots: false,
     caseSensitive: false,
     mentionPrefix: false,
+    presence: { 
+        activity: {
+          name: "type !help",
+          type: "PLAYING",
+        },
+        status: "idle"
+    }
+
 })
 
-GWGBot.on('ready', () => {
-  console.log(`Logged in as ${GWGBot.user?.tag}!`)
+GWGBot.on("ready", () => {
+    console.log(`Logged in as ${GWGBot.user?.tag}!`)
 })
-
-class Ping extends Command {
-    name = "ping"
-
-    async execute(ctx: CommandContext) {
-        await ctx.message.reply(`Pong: ${ctx.client.gateway.ping} ms`)
-    }    
-}
 
 GWGBot.commands.add(Ping)
+GWGBot.commands.add(About)
 GWGBot.connect(Constants.BOT_TOKEN, [GatewayIntents.GUILDS, GatewayIntents.GUILD_MEMBERS, GatewayIntents.GUILD_MESSAGES]);

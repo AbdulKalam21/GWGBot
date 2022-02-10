@@ -1,0 +1,8 @@
+{   
+    "imports": {
+        "Harmony": "https://deno.land/x/harmony/mod.ts",
+        "src/": "./src/ ",
+        "Commands/": "./src/Commands/",
+        "Common/": "./src/Common/"
+    }
+}
