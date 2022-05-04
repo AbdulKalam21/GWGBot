@@ -15,18 +15,18 @@
 * A Discord Bot
 
 ### Project Setup
+- Clone the Project
 ```bash
 git clone https://github.com/GWGBot/GWGBot.git
 cd GWGBot
 ```
-- Create `/data/config.json` and paste your bot token
-```json
-{
-	"token": "Your Bot Token"
-}
-```
+- Add your bot token in a envrionment variable named "BOT_TOKEN"
 ```bash
-deno run -allow-net --allow-read --import-map=import_map.json mod.ts
+export BOT_TOKEN="Your Bot token in a string"
+```
+- Run the bot using deno
+```bash
+deno run --import-map=import_map.json --allow-net --allow-env src/GWGBot.ts
 ```
 
 ### License
