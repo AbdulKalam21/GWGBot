@@ -1,0 +1,1 @@
+worker: deno run --import-map=import_map.json --allow-net --allow-env src/GWGBot.ts
