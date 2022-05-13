@@ -41,7 +41,7 @@ GWGBot.on("guildMemberAdd", async(member) => {
                     `- Get some roles <#${Constants.SELF_ROLES_CHANNEL_ID}>\n` +
                     `- Introduce yourself <#${Constants.WELCOME_CHANNEL_ID}>`,
                     )
-                    .setFooter(`You are our ${guild.approximateNumberCount}th member`, guild.iconURL());
+                    // .setFooter(`You are our ${guild.approximateNumberCount}th member`, guild.iconURL());
                     await welcome.send({ embed: embed });
                 }
             }
